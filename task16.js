@@ -1,11 +1,12 @@
-const n = 6;
-let result = '-';
-let sign = 1;
+let n = 6;
+let result = "";
+
 for (let i = 1; i <= n; i++) {
-  result += sign * i;
-  if (i < n) {
-    result += sign > 0 ? '+' : '-';
-    sign = -sign;
+  if (i % 2 === 0) {
+    result += "+" + i;
+  } else {
+    result += "-" + i;
   }
 }
+
 console.log(result);
